@@ -12,4 +12,5 @@
   + `let name:string = 'Josh Allen'`
   + `let airTicket:{id:number, name:string, no: string} = { id:1, name:'James Cook', no:'1234567'}`
   + `function getName(name:string):string{ return name; }`
-  + `let cities: string[] = []` or `let cities:Array<string> = []`
+  + `let cities: string[] = []`
+  + `let cities:Array<string> = []` - here using generics T<U>

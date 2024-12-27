@@ -83,5 +83,13 @@ console.log(phone.home);
   
 ## Tuples
 + Assignment
-  + `let car: [string, number, boolean] = ['mustang', 8, true];` - creates an array of specific member count, in this case this array can only have 3 members.
+  + Simple: `let car: [string, number, boolean] = ['mustang', 8, true];` - creates an array of specific member count, in this case this array can only have 3 members.
+  + Complex: 
+    ```
+    type carType = [string, number, boolean]
+
+    let car: carType = ['mustang', 8, true];
+
+    console.log(car[2])
+    ```
   

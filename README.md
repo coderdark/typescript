@@ -80,6 +80,7 @@ console.log(phone.home);
 
     console.log(cars)
 ```
++ Two dimentional array `let grades: number[][] = [[100,100,90,80], [80,80,50,100]]`
   
 ## Tuples
 + Assignment

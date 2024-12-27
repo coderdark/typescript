@@ -60,3 +60,24 @@ phone["cell"] = {number: "479.143.5555"}; //best practice to use the dot notatio
 console.log(phone.home);
 ```
 
+## Arrays
++ Assignment
+  + Simple: `let grades: number[] = []`
+  + Complex:
+    ```
+      const cars:{model:string, cylinders:number, sport:boolean}[] = [
+        {
+            model:'mustang',
+            cylinders:8,
+            sport:true,
+        },
+        {
+            model:'silverado',
+            cylinders:8,
+            sport:false,
+        }
+    ]
+
+    console.log(cars)
+  ```
+

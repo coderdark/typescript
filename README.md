@@ -1,4 +1,5 @@
 # Typescript
+Typescript uses structural type checking instead of nominal type checking.
 
 ## Primitives Types - use the lowercase names!
 + `number`

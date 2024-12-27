@@ -1,5 +1,5 @@
 # Typescript
-Typescript uses structural type checking instead of nominal type checking.
+Typescript uses structural type checking instead of nominal type checking. Typescript uses static typying instead of dynamic typing like javascript.
 
 ## Primitives Types - use the lowercase names!
 + `number`

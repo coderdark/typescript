@@ -26,7 +26,7 @@
   + `let name:string = 'Josh Allen'`
   + `let airTicket:{id:number, name:string, no: string} = { id:1, name:'James Cook', no:'1234567'}`
   + `function getName(name:string):string{ return name; }`
-  + `let cities: string[] = []`
+  + `let cities: string[] = []` - prefer way of type annotation for arrays
   + `let cities:Array<string> = []` - here using generics T<U>, CAREFUL IF USING REACT THIS TYPE FORMAT CAN CREATE ISSUES!  STICK TO THE TYPE ANNOTAION ABOVE.
 
 ## Type Assertions

@@ -108,4 +108,10 @@ console.log(phone.home);
 
     console.log(car[2])
 ```
-  
+## Unions and Intersection Types
++ OR |
+  + ```
+    let isAvailable: 0 | 1 | boolean = 1;
+
+    console.log(isAvailable);
+    ```

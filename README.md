@@ -1,9 +1,18 @@
 # Typescript
 
-## Primitives - use the lowercase names!
-+ number
-+ string
-+ boolean
+## Primitives Types - use the lowercase names!
++ `number`
++ `string`
++ `boolean`
++ `bigint` - new version of typescript
++ `symbol` - new version of typescript
+
+## Special Types
++ `any` - disables checking and you can assign any type to the variable that has this defined type
++ `unknown` - safer alternative to type `any`
++ `never` - throws error whenever is defined
++ `null` - native javascript type primitive use in typescript
++ `undefined` - native javascript type primitive use in typescript
   
 ## Variables
 + Automatically type inference (Implicit automatically done by typescript) when initializing a variable

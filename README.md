@@ -55,7 +55,7 @@ obj.color = 64 //❌ this would not work because the value type is a number but 
 const phone: { [prop: string]: { number: string } } = {};
 
 phone.home = {number: "479.678.5555"};
-phone.cell = {number: "479.143.5555"};
+phone["cell"] = {number: "479.143.5555"};
 
 console.log(phone.home);
 ```

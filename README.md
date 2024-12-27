@@ -31,4 +31,15 @@
 
 ## Type Assertions
 + `let name = "Josh" as "Josh"` - here the variable 'name' can only accept the value "Josh" and nothing else otherwise it throws an error
-+ `let canvas = document.getElementById("gameCanvas") as HTMLCanvasElement` - here typescript does automatic type inference to a `HTMLElement` if you want to be more explicit you can use a type assertion to make sure your canvas is of type  `HTMLCanvasElement` instead of the default type `HTMLElement` 
++ `let canvas = document.getElementById("gameCanvas") as HTMLCanvasElement` - here typescript does automatic type inference to a `HTMLElement` if you want to be more explicit you can use a type assertion to make sure your canvas is of type  `HTMLCanvasElement` instead of the default type `HTMLElement`
+
+## Optionals
++ ```
+  const car: {
+    id:string
+    model:string
+    cylinders:number
+    sport:boolean
+    electric?:boolean //the ? marks the property as optional
+  }
+  ```

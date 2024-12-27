@@ -64,7 +64,7 @@ console.log(phone.home);
 + Assignment
   + Simple: `let grades: number[] = []`
   + Complex:
-    ```
+```
       const cars:{model:string, cylinders:number, sport:boolean}[] = [
         {
             model:'mustang',
@@ -79,17 +79,17 @@ console.log(phone.home);
     ]
 
     console.log(cars)
-  ```
+```
   
 ## Tuples
 + Assignment
   + Simple: `let car: [string, number, boolean] = ['mustang', 8, true];` - creates an array of specific member count, in this case this array can only have 3 members.
   + Complex: 
-    ```
+```
     type carType = [string, number, boolean]
 
     let car: carType = ['mustang', 8, true];
 
     console.log(car[2])
-    ```
+```
   

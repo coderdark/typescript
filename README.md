@@ -19,3 +19,7 @@
   + `function getName(name:string):string{ return name; }`
   + `let cities: string[] = []`
   + `let cities:Array<string> = []` - here using generics T<U>
+
+## Type Assertions
++ `let name = "Josh" as "Josh"` - here the variable 'name' can only accept the value "Josh" and nothing else otherwise it throws an error
++ `let canvas = document.getElementById("gameCanvas") as HTMLCanvasElement` - here typescript does automatic type inference to a `HTMLElement` if you want to be more explicit you can use a type assertion to make sure your canvas is of type  `HTMLCanvasElement` instead of the default type `HTMLElement` 

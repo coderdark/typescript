@@ -111,7 +111,7 @@ console.log(phone.home);
 ## Unions and Intersection Types
 + OR |
   + ```
-    let isAvailable: 0 | 1 | boolean = 1;
+    let isAvailable: 0 | 1 | boolean = 1; //isAvailable can only take the following values: 0, 1, true, false
 
     console.log(isAvailable);
     ```

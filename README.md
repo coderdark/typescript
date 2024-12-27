@@ -20,14 +20,14 @@
   + `let name = 'Josh Allen'` - string
   + `let airTicket = { id:1, name:'James Cook', no:'1234567' }` - {id:number, name:string, no: string}
   + `function getName(name){ return name; }` - function getName(name:string):string
-  + `let cities = []` - any[], CAREFUL, YOU MAY WANT TO EXPLICITLY ASSIGN A TYPE TO AVOID ISSUES
+  + `let states = []` - any[], CAREFUL, YOU MAY WANT TO EXPLICITLY ASSIGN A TYPE TO AVOID ISSUES OR INCLUDE VALUES TO THE ARRAY SO TYPESCRIPT CAN TYPE INFER THE TYPE OF ARRAY ie: `let states = ['Michigan', 'Colorado']` this tells typescript this is a string array, string[].
 + Explicit type inference (type annotations, ei: number, string, boolean)
   + `let age:number = 34`
   + `let name:string = 'Josh Allen'`
   + `let airTicket:{id:number, name:string, no: string} = { id:1, name:'James Cook', no:'1234567'}`
   + `function getName(name:string):string{ return name; }`
   + `let cities: string[] = []`
-  + `let cities:Array<string> = []` - here using generics T<U>
+  + `let cities:Array<string> = []` - here using generics T<U>, CAREFUL IF USING REACT THIS TYPE FORMAT CAN CREATE ISSUES!  STICK TO THE TYPE ANNOTAION ABOVE.
 
 ## Type Assertions
 + `let name = "Josh" as "Josh"` - here the variable 'name' can only accept the value "Josh" and nothing else otherwise it throws an error

@@ -1,7 +1,7 @@
 # Typescript
 
 ## Variables
-+ Automatically type inference when initializing a variable
++ Automatically type inference (Implicit automatically done by typescript) when initializing a variable
   + `let age = 34` - number
   + `let name = 'Josh Allen'` - string
   + `let airTicket = { id:1, name:'James Cook', no:'1234567' }` - {id:number, name:string, no: string}

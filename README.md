@@ -128,6 +128,13 @@ X▒▒▒▒▒▒▒▒▒▒▒▒▒X▒▒▒▒▒▒▒X▒▒▒▒▒�
     let isAvailable: 0 | 1 | boolean = 1; //isAvailable can only take the following values: 0, 1, true, false
 
     console.log(isAvailable);
+
+    //or
+    type onOff = 0 | 1 | boolean;
+
+    let isAvailable = 1; //isAvailable can only take the following values: 0, 1, true, false
+
+    console.log(isAvailable);
  ```
 + Intersection - AND &
 ```
@@ -144,7 +151,10 @@ X             X▒▒▒▒▒▒▒X             X
        XXXXXXXXX     XXXXXXXXX       
 ```  
 ```
-    let isAvailable: 0 | 1 | boolean = 1; //isAvailable can only take the following values: 0, 1, true, false
+  type evens = 2 | 4 | 6 | 8;
+  type toFive = 1 | 2 | 3 | 4 | 5;
 
-    console.log(isAvailable);
+  let nums: evens & toFive = 2
+
+  console.log(nums);
 ```

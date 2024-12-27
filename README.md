@@ -51,5 +51,11 @@ const obj: {[prop:string]:string} = {}; // this obj can have a property assigned
 obj.color = "green" //✅ this works because the property is of type string and its value is of type script
 
 obj.color = 64 //❌ this would not work because the value type is a number but we typed the value as a string
+
+const obj2: { [prop: string]: { name: string } } = {};
+
+obj2.phone = {name: "iphone"};
+
+console.log(obj2.phone.name);
 ```
 

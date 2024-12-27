@@ -52,10 +52,11 @@ obj.color = "green" //✅ this works because the property is of type string and 
 
 obj.color = 64 //❌ this would not work because the value type is a number but we typed the value as a string
 
-const obj2: { [prop: string]: { name: string } } = {};
+const phone: { [prop: string]: { number: string } } = {};
 
-obj2.phone = {name: "iphone"};
+phone.home = {number: "479.678.5555"};
+phone.cell = {number: "479.143.5555"};
 
-console.log(obj2.phone.name);
+console.log(phone.home);
 ```
 

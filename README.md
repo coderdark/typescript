@@ -95,6 +95,10 @@ console.log(phone.home);
   + NOTES: The length of the tuple when using `car.length` may just be giving you the  count of the types in the type annotation not the count of the elements in the array when using methods like `pop`, `push` from the javascript array object!
   + You can use `readonly` to prevent the usage of those methods (from javascript array object)!
 ```
+    let car: readonly [string, number, boolean] = ['mustang', 8, true];
+
+    //or
+
     type carType = readonly [string, number, boolean]
 
     let car: carType = ['mustang', 8, true];

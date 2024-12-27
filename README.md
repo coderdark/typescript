@@ -130,17 +130,17 @@ X▒▒▒▒▒▒▒▒▒▒▒▒▒X▒▒▒▒▒▒▒X▒▒▒▒▒�
  ```
 + Intersection - AND &
 ```
+        XXXXXXXXX     XXXXXXXXX       
+    XXX         XXXXX         XXX    
+  XX            XX▒XX            XX  
+ X             X▒▒▒▒▒X             X 
+X             X▒▒▒▒▒▒▒X             X
+X             X▒▒▒▒▒▒▒X             X
+X             X▒▒▒▒▒▒▒X             X
+ X             X▒▒▒▒▒X             X 
+  XX            XX▒XX            XX  
+    XXX         XXXXX         XXX    
        XXXXXXXXX     XXXXXXXXX       
-    XXX         XXXXX         XXX    
-  XX            XXXXX            XX  
- X             XXXXXXX             X 
-X             XXXXXXXXX             X
-X             XXXXXXXXX             X
-X             XXXXXXXXX             X
- X             XXXXXXX             X 
-  XX            XXXXX            XX  
-    XXX         XXXXX         XXX    
-       XXXXXXXXX     XXXXXXXXX
 ```  
 ```
     let isAvailable: 0 | 1 | boolean = 1; //isAvailable can only take the following values: 0, 1, true, false

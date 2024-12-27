@@ -34,7 +34,7 @@
 + `let canvas = document.getElementById("gameCanvas") as HTMLCanvasElement` - here typescript does automatic type inference to a `HTMLElement` if you want to be more explicit you can use a type assertion to make sure your canvas is of type  `HTMLCanvasElement` instead of the default type `HTMLElement`
 
 ## Optionals
-+ ```
+```
   const car: {
     id:string
     model:string
@@ -42,4 +42,14 @@
     sport:boolean
     electric?:boolean //the ? marks the property as optional
   }
-  ```
+```
+
+## Index Signatures
+```
+const obj: {[prop:string]:string} = {}; // this obj can have a property assigned to it that is of type string and its value is also of type string
+
+obj.color = "green" //✅ this works because the property is of type string and its value is of type script
+
+obj.color = 64 //❌ this would not work because the value type is a number but we typed the value as a string
+```
+

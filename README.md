@@ -270,7 +270,7 @@ let p = new FootballPlayer("Josh Allen", 17, 'quarterback');
 console.log(p.getName());
 console.log(p.getPosition());
 ```
-+ Interfaces are OPEN - meaning you can modify them (add) new properties or methods after they have been declared
++ Interfaces are OPEN (NOT TYPE ALIAS) - meaning you can modify them (add) new properties or methods after they have been declared
 ```
 interface Player {
     name: string;

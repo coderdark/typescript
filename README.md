@@ -54,7 +54,7 @@ const obj: {[prop:string]:string} = {}; // this obj can have a property assigned
 
 obj.color = "green" //✅ this works because the property is of type string and its value is of type script
 
-obj.color = 64 //❌ this would not work because the value type is a number but we typed the value as a string
+obj.color = 64 //❌ this would not work because the property value type is a number but we typed the value as a string. For this to work you will need to change the property value type to type `any`
 
 const phone: { [prop: string]: { number: string } } = {};
 

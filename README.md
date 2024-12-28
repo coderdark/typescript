@@ -207,3 +207,35 @@ function getPlayerName(player: Player): string {
 console.log(getPlayerName(quarterback))
 console.log(getPlayerName(runningBack))
 ```
++ Interfaces
+  +  Extends
+```
+//Sample 1
+interface Player {
+    name: string
+    number: number
+}
+
+function getPlayerName(player: Player): string {
+    return player.name;
+}
+
+console.log(getPlayerName({name: 'Josh Allen', number: 17}))
+
+//Sample 2
+interface Person {
+    name: string
+}
+
+interface Player extends Person {
+    number: number
+    position: string
+}
+
+function getPlayerName2(player: Player): string {
+    return player.name;
+}
+
+console.log(getPlayerName2({name: 'Josh Allen', number: 17, position: 'quarterback'}))
+```
+  +  Implements 

@@ -343,4 +343,13 @@ type DateProperties = keyof Date
 type DateStringProperties = DateProperties & string
 type DateSymbolProperties = DateProperties & symbol
 ```
-+ typeof
++ typeof - here is extracting the shape of response and creating a type `myResponse`. This is different from using typeof in a conditional to see if variable if of the required type.
+```
+const response = {
+    status: 200,
+}
+
+type myResponse = typeof response
+
+//myResponse = { status: number }
+```

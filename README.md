@@ -354,3 +354,23 @@ type myResponse = typeof response
 
 //myResponse = { status: number }
 ```
++ Index access types
+```
+interface Year {
+    dayName: string;
+    dayNumber: number;
+    monthName: string;
+    monthNumber: number;
+    time:{
+      hours:number;
+      minutes:number;
+    }
+}
+
+let x: Year["dayNumber"] = 7
+let y: Year["dayName" | "monthNumber"] = "Friday"
+let z: Year["dayName" | "monthNumber"] = 3
+let a: Year["time"]["hours"] = 23
+
+console.log(x, y, z, a)
+```

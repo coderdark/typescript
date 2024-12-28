@@ -270,3 +270,45 @@ let p = new FootballPlayer("Josh Allen", 17, 'quarterback');
 console.log(p.getName());
 console.log(p.getPosition());
 ```
++ Interfaces are OPEN - meaning you can modify them (add) new properties or methods after they have been declared
+```
+interface Player {
+    name: string;
+    number: number
+    position: string
+
+    getName(): string
+}
+
+class FootballPlayer implements Player {
+    name = "";
+    number = 0;
+    position = "";
+    height = 0;
+
+    constructor(name: string, number: number, position: string, height: number) {
+        this.name = name;
+        this.number = number;
+        this.position = position;
+        this.height = height
+    }
+
+    getName(): string {
+        return this.name;
+    }
+
+    getPosition(): string {
+        return this.position;
+    }
+}
+
+interface Player {
+    height: number
+}
+
+let p = new FootballPlayer("Josh Allen", 17, 'quarterback', 6.5);
+
+console.log(p.getName());
+console.log(p.getPosition());
+
+```

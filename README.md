@@ -374,3 +374,22 @@ let a: Year["time"]["hours"] = 23
 
 console.log(x, y, z, a)
 ```
+
+## Callables (Function Declaration)
+```
+//Interface
+interface AddFunI {
+    (a: number, b: number): number;
+}
+
+const add1:AddFunI = (a: number, b: number) => a + b;
+
+console.log(add1(2,2))
+
+//Type Alias
+type AddFunT = (a: number, b: number) => number;
+
+const add2:AddFunT = (a: number, b: number) => a + b;
+
+console.log(add2(5,5))
+```

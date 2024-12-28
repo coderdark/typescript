@@ -1,7 +1,8 @@
 # Typescript
 Typescript uses structural type checking instead of nominal type checking. Typescript uses static typying instead of dynamic typing like javascript.
 
-https://www.typescript-training.com/course/fundamentals-v4
++ Setting VS Code: https://code.visualstudio.com/docs/typescript/typescript-compiling
++ https://www.typescript-training.com/course/fundamentals-v4
 
 ## Primitives Types - use the lowercase names!
 + `number`

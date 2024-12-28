@@ -312,3 +312,18 @@ console.log(p.getName());
 console.log(p.getPosition());
 
 ```
++ Modifying the global object
+```
+const message = "This message export is here for the declare global to work";
+
+declare global {
+    interface Window {
+        myProperty: string
+    }
+}
+
+window.myProperty
+
+export default message
+
+```

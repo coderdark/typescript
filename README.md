@@ -239,3 +239,32 @@ function getPlayerName2(player: Player): string {
 console.log(getPlayerName2({name: 'Josh Allen', number: 17, position: 'quarterback'}))
 ```
   +  Implements 
+```
+interface Player {
+    name: string;
+    number:number
+    position:string
+    getName():string
+}
+
+class FootballPlayer implements Player {
+    constructor(public name: string, public number:number, public position:string) {
+        this.name = name;
+        this.number = number;
+        this.position = position;
+    }
+
+    getName(): string {
+        return this.name;
+    }
+
+    getPosition():string{
+        return this.position;
+    }
+}
+
+let p = new FootballPlayer("Josh Allen", 17, 'quarterback');
+
+console.log(p.getName());
+console.log(p.getPosition());
+```

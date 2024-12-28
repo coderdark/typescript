@@ -325,9 +325,10 @@ window.myProperty
 
 export default message
 ```
-+ Interfaces can be recursive
+
+## Recursive Types
 ```
-type myNumbers = number | myNumbers[]
+type myNumbers = number | myNumbers[] //here the myNumbers
 
 let nums:myNumbers = [1,2,[3,[4],5],6,7]
 

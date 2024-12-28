@@ -158,3 +158,44 @@ X             X▒▒▒▒▒▒▒X             X
 
   console.log(nums);
 ```
+
+## Type Aliases And Interfaces
+Provides a name to the shape of the custom type
+
++Type Aliases
+```
+type Player = {
+    name: string
+    number: number
+    position: string
+}
+
+let quarterback: Player = {
+    name: "Josh Allen",
+    number: 17,
+    position: "Quarterback",
+}
+
+let runningBack: Player = {
+    name: "James Cook",
+    number: 4,
+    position: "Running back",
+}
+
+console.log(quarterback)
+console.log(runningBack)
+
+type name = string | null;
+
+let firstName:name = null;
+let lastName:name = "Allen";
+
+console.log(firstName);
+console.log(lastName);
+
+type MyDate = Date & {getMessage(): string};
+const d: MyDate = Object.assign(new Date(), {getMessage: () => "New Year!"})
+
+console.log(d.getMessage())
+
+```

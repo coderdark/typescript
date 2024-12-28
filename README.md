@@ -343,3 +343,4 @@ type DateProperties = keyof Date
 type DateStringProperties = DateProperties & string
 type DateSymbolProperties = DateProperties & symbol
 ```
++ typeof

@@ -393,3 +393,20 @@ const add2:AddFunT = (a: number, b: number) => a + b;
 
 console.log(add2(5,5))
 ```
+
+## Void
+This means to ignore the retrun type no matter what it is
+```
+function invoke(fn: () => undefined) {
+    setTimeout(fn, 1);
+}
+
+function invoke2(fn: () => void) {
+    setTimeout(fn, 1);
+}
+
+const vals: number[] = [];
+
+invoke(()=>vals.push(4)) //here since push returns a number and the invoke callback has a return type of undefined, we run into an issue.
+invoke2(()=>vals.push(4)) //here since the invoke2 callback type is void, it really does not matter what push returns.  Void ignores the return value.
+``

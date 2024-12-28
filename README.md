@@ -334,3 +334,12 @@ let nums:myNumbers = [1,2,[3,[4],5],6,7]
 
 console.log(nums)
 ```
+
+## Type Queries
++ keyof
+```
+type DateProperties = keyof Date
+
+type DateStringProperties = DateProperties & string
+type DateSymbolProperties = DateProperties & symbol
+```

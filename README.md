@@ -310,7 +310,6 @@ let p = new FootballPlayer("Josh Allen", 17, 'quarterback', 6.5);
 
 console.log(p.getName());
 console.log(p.getPosition());
-
 ```
 + Modifying the global object
 ```
@@ -325,5 +324,12 @@ declare global {
 window.myProperty
 
 export default message
+```
++ Interfaces can be recursive
+```
+type myNumbers = number | myNumbers[]
 
+let nums:myNumbers = [1,2,[3,[4],5],6,7]
+
+console.log(nums)
 ```

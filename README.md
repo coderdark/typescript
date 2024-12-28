@@ -48,7 +48,7 @@ https://www.typescript-training.com/course/fundamentals-v4
   }
 ```
 
-## Index Signatures
+## Index Signatures ({[prop:string]:any})
 ```
 const obj: {[prop:string]:string} = {}; // this obj can have a property assigned to it that is of type string and its value is also of type string
 

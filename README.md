@@ -164,6 +164,21 @@ Provides a name to the shape of the custom type
 
 +Type Aliases
 ```
+type name = string | null;
+
+let firstName:name = null;
+let lastName:name = "Allen";
+
+console.log(firstName);
+console.log(lastName);
+
+//Sample
+type MyDate = Date & {getMessage(): string};
+const d: MyDate = Object.assign(new Date(), {getMessage: () => "New Year!"})
+
+console.log(d.getMessage())
+
+//Sample
 type Player = {
     name: string
     number: number
@@ -185,17 +200,10 @@ let runningBack: Player = {
 console.log(quarterback)
 console.log(runningBack)
 
-type name = string | null;
+function getPlayerName(player: Player): string {
+    return player.name;
+}
 
-let firstName:name = null;
-let lastName:name = "Allen";
-
-console.log(firstName);
-console.log(lastName);
-
-type MyDate = Date & {getMessage(): string};
-const d: MyDate = Object.assign(new Date(), {getMessage: () => "New Year!"})
-
-console.log(d.getMessage())
-
+console.log(getPlayerName(quarterback))
+console.log(getPlayerName(runningBack))
 ```

@@ -162,7 +162,7 @@ X             X▒▒▒▒▒▒▒X             X
 ## Type Aliases And Interfaces
 Provides a name to the shape of the custom type
 
-+Type Aliases
++ Type Aliases
 ```
 type name = string | null;
 

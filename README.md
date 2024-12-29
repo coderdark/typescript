@@ -540,3 +540,18 @@ console.log(p.speak())
 ```
 
 ## Generics
+```
+function count<T>(arr: T[]): number {
+    return arr.reduce((acc, current) => {
+        if (typeof current === 'string')
+            acc += 1;
+        else
+            acc += current as number;
+
+        return acc;
+    }, 0)
+}
+
+console.log(count([1, 1, 1, 1, 1]));
+console.log(count("test in the typescript".split('')));
+```

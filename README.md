@@ -565,18 +565,40 @@ console.log(count([{}, {}, {}, null, null]));
 ```
 +Extend Generics
 ```
-type ApiResponse<Data extends object> = { //Data extends from object
+type HTTPResponse<Data extends object> = { //Data extends from object
     data: Data;
+    status: number;
     isError: boolean;
 }
 
-const response: ApiResponse<object> = {
+const response: HTTPResponse<object> = {
     data: {
         message: "blah"
     },
+    status: 200,
     isError: false
 }
 
 console.log(response)
 console.log(response.data)
+```
++ Generic Default Values
+```
+type HTTPResponse<Data, Status = 200> = { //Data extends from object, Status has a default value
+    data: Data;
+    status: Status;
+    isError: boolean;
+}
+
+const response: HTTPResponse<object> = {
+    data: {
+        message: "blah"
+    },
+    status:200, //if I provide anything else than the default status 200 (see above Status), typescript will throw and error of "Not Assignable"
+    isError: false
+}
+
+console.log(response)
+console.log(response.data)
+console.log(response.status)
 ```

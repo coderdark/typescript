@@ -540,18 +540,43 @@ console.log(p.speak())
 ```
 
 ## Generics
++ Functions
 ```
-function count<T>(arr: T[]): number {
+function count<T>(arr: T[]) {
     return arr.reduce((acc, current) => {
-        if (typeof current === 'string')
+        if (typeof current === 'number') {
+            acc += current
+        } else if (typeof current === 'boolean') {
+            acc += Number(current)
+        } else if (typeof current === 'string') {
             acc += 1;
-        else
-            acc += current as number;
+        }else if(current !== null && typeof current === 'object') {
+            acc += 1;
+        }
 
         return acc;
     }, 0)
 }
 
 console.log(count([1, 1, 1, 1, 1]));
+console.log(count([true, false, true, false, true, true]));
 console.log(count("test in the typescript".split('')));
+console.log(count([{}, {}, {}, null, null]));
+```
++Extend Generics
+```
+type ApiResponse<Data extends object> = { //Data extends from object
+    data: Data;
+    isError: boolean;
+}
+
+const response: ApiResponse<object> = {
+    data: {
+        message: "blah"
+    },
+    isError: false
+}
+
+console.log(response)
+console.log(response.data)
 ```

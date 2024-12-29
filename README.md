@@ -463,3 +463,51 @@ console.log(h.age)
 console.log(h.gender)
 console.log(Human.type)
 ```
++ Param Properties
+```
+type Gender = "m" | "f" | "male" | "female" | "na";
+
+class Human {
+    static readonly type: string = "human"; //static means to be used without instantiating the class, readonly means it can not be changed but only read
+    protected version: string = "v1.0" //protected means it can only be used/seen by the subclasses but not a new instance of Human
+
+    constructor(private _name: string,
+                private _age: number,
+                private _gender: Gender) {
+    }
+
+    get name(): string {
+        return this._name;
+    }
+
+    set name(value: string) {
+        this._name = value;
+    }
+
+    get age(): string {
+        return this._age.toString();
+    }
+
+    get gender(): string {
+        if (this._gender === "male")
+            return "male";
+        else if (this._gender === "female")
+            return "female";
+
+        return this._gender.toString();
+    }
+
+    set gender(value: Gender) {
+        this._gender = value;
+    }
+
+}
+
+let h = new Human("Jenny", 21, "f")
+
+h.name = "Jane"
+console.log(h.name);
+console.log(h.age)
+console.log(h.gender)
+console.log(Human.type)
+```

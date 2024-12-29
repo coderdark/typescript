@@ -409,4 +409,6 @@ const vals: number[] = [];
 
 invoke(()=>vals.push(4)) //here since push returns a number and the invoke callback has a return type of undefined, we run into an issue.
 invoke2(()=>vals.push(4)) //here since the invoke2 callback type is void, it really does not matter what push returns.  Void ignores the return value.
-``
+```
+
+## Classes

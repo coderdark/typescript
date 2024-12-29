@@ -538,3 +538,5 @@ let p = new Player("Josh", 28, "m");
 console.log(h.speak())
 console.log(p.speak())
 ```
+
+## Generics

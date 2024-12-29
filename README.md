@@ -92,9 +92,9 @@ console.log(phone.home);
   + Simple: `let car: [string, number, boolean] = ['mustang', 8, true];` - creates an array of specific member count, in this case this array can only have 3 members.
   + Complex: 
 ```
-    type carType = [string, number, boolean]
+    type CarType = [string, number, boolean]
 
-    let car: carType = ['mustang', 8, true];
+    let car: CarType = ['mustang', 8, true];
 
     console.log(car[2])
 ```
@@ -106,9 +106,9 @@ console.log(phone.home);
 
     //or
 
-    type carType = readonly [string, number, boolean]
+    type CarType = readonly [string, number, boolean]
 
-    let car: carType = ['mustang', 8, true];
+    let car: CarType = ['mustang', 8, true];
 
     console.log(car[2])
 ```
@@ -154,10 +154,10 @@ X             X▒▒▒▒▒▒▒X             X
        XXXXXXXXX     XXXXXXXXX       
 ```  
 ```
-  type evens = 2 | 4 | 6 | 8;
-  type toFive = 1 | 2 | 3 | 4 | 5;
+  type Evens = 2 | 4 | 6 | 8;
+  type ToFive = 1 | 2 | 3 | 4 | 5;
 
-  let nums: evens & toFive = 2
+  let nums: Evens & ToFive = 2
 
   console.log(nums);
 ```
@@ -167,10 +167,10 @@ Provides a name to the shape of the custom type
 
 + Type Aliases
 ```
-type name = string | null;
+type Name = string | null;
 
-let firstName:name = null;
-let lastName:name = "Allen";
+let firstName:Name = null;
+let lastName:Name = "Allen";
 
 console.log(firstName);
 console.log(lastName);
@@ -329,9 +329,9 @@ export default message
 
 ## Recursive Types
 ```
-type myNumbers = number | myNumbers[] //here the myNumbers
+type MyNumbers = number | MyNumbers[] //here the myNumbers is recursive
 
-let nums:myNumbers = [1,2,[3,[4],5],6,7]
+let nums:MyNumbers = [1,2,[3,[4],5],6,7]
 
 console.log(nums)
 ```
@@ -350,9 +350,9 @@ const response = {
     status: 200,
 }
 
-type myResponse = typeof response
+type MyResponse = typeof response
 
-//myResponse = { status: number }
+//MyResponse = { status: number }
 ```
 + Index access types
 ```
@@ -412,3 +412,38 @@ invoke2(()=>vals.push(4)) //here since the invoke2 callback type is void, it rea
 ```
 
 ## Classes
+```
+type Gender = "m" | "f" | "male" | "female";
+
+class Human {
+    static type: string = "human"; //static means to be used without instantiating the class, this is a class member not a class instance member
+    private name: string; //private means to only be used internally in the class
+    private age: number; //private means to only be used internally in the class
+    private readonly gender: Gender
+
+    constructor(name: string, age: number, gender: Gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+
+    getAge(): string {
+        return this.age.toString()
+    }
+
+    getGender(): string {
+        if (this.gender === "m")
+            return "male"
+        else if (this.gender === "f")
+            return "female"
+
+        return this.gender.toString()
+    }
+}
+
+let h = new Human("Jane", 21, "f")
+
+console.log(Human.type)
+console.log(h.getAge())
+console.log(h.getGender())
+```

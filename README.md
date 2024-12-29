@@ -511,3 +511,30 @@ console.log(h.age)
 console.log(h.gender)
 console.log(Human.type)
 ```
++ Override
+```
+type Gender = "m" | "f" | "male" | "female" | "na";
+
+class Human {
+    constructor(private _name: string,
+                private _age: number,
+                private _gender: Gender) {
+    }
+
+    speak(): string {
+        return "blah, blah, blah"
+    }
+}
+
+class Player extends Human {
+    override speak(): string { //here we are overriding the speak method
+        return "blue 47, blue 47, set, hike, hike"
+    }
+}
+
+let h = new Human("Jenny", 21, "f");
+let p = new Player("Josh", 28, "m");
+
+console.log(h.speak())
+console.log(p.speak())
+```

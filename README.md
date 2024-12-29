@@ -413,37 +413,53 @@ invoke2(()=>vals.push(4)) //here since the invoke2 callback type is void, it rea
 
 ## Classes
 ```
-type Gender = "m" | "f" | "male" | "female";
+type Gender = "m" | "f" | "male" | "female" | "na";
 
 class Human {
-    static type: string = "human"; //static means to be used without instantiating the class, this is a class member not a class instance member
-    private name: string; //private means to only be used internally in the class
-    private age: number; //private means to only be used internally in the class
-    private readonly gender: Gender
+    static type: string = "human"; //static means to be used without instantiating the class
+    protected version: string = "v1.0" //protected means it can only be used/seen by the subclasses but not a new instance of Human
+    private _name: string; //private means to only be used internally in the class
+    private _age: number; //private means to only be used internally in the class
+    private _gender: Gender
 
     constructor(name: string, age: number, gender: Gender) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
+        this._name = name;
+        this._age = age;
+        this._gender = gender;
     }
 
-    getAge(): string {
-        return this.age.toString()
+    get name(): string {
+        return this._name;
     }
 
-    getGender(): string {
-        if (this.gender === "m")
-            return "male"
-        else if (this.gender === "f")
-            return "female"
-
-        return this.gender.toString()
+    set name(value: string) {
+        this._name = value;
     }
+
+    get age(): string {
+        return this._age.toString();
+    }
+
+    get gender(): string {
+        if (this._gender === "male")
+            return "male";
+        else if (this._gender === "female")
+            return "female";
+
+        return this._gender.toString();
+    }
+
+    set gender(value: Gender) {
+        this._gender = value;
+    }
+
 }
 
-let h = new Human("Jane", 21, "f")
+let h = new Human("Jenny", 21, "f")
 
+h.name = "Jane"
+console.log(h.name);
+console.log(h.age)
+console.log(h.gender)
 console.log(Human.type)
-console.log(h.getAge())
-console.log(h.getGender())
 ```

@@ -539,7 +539,7 @@ console.log(h.speak())
 console.log(p.speak())
 ```
 
-## Generics
+## Generics (Type Parameters)
 + Functions
 ```
 function count<T>(arr: T[]) {

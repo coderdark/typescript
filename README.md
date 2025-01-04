@@ -13,7 +13,7 @@ Typescript uses structural type checking instead of nominal type checking. Types
 
 ## Special Types
 + `any` - disables checking and you can assign any type to the variable that has this defined type
-+ `unknown` - safer alternative to type `any`
++ `unknown` - typesafe counter part to `any`. Safer alternative to type `any`
 + `never` - throws error whenever is defined
 + `null` - native javascript type primitive use in typescript
 + `undefined` - native javascript type primitive use in typescript

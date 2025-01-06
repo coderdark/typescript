@@ -32,6 +32,8 @@ Typescript uses structural type checking instead of nominal type checking. Types
   + `function getName(name:string):string{ return name; }`
   + `let cities: string[] = []` - prefer way of type annotation for arrays
   + `let cities:Array<string> = []` - here using generics T<U>, CAREFUL IF USING REACT THIS TYPE FORMAT CAN CREATE ISSUES!  STICK TO THE TYPE ANNOTAION ABOVE.
+  + You can use a `?` for optional variables
+  + You can use a `_` for unused arguments
 
 ## Type Assertions
 + `let name = "Josh" as "Josh"` - here the variable 'name' can only accept the value "Josh" and nothing else otherwise it throws an error
